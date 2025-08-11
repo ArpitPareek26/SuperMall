@@ -59,7 +59,11 @@ const App = () => {
           <Route path="/shop/:shopId" element={<ShopDetails />} />
           {/* <Route path="/product/:productId" element={<ProductDetails />} />
           <Route path="/checkout/:productId" element={<Checkout />} /> */}
-          <Route element={<ProtectedRoute allowedRoles={["user"]} />}>
+          <Route
+            element={
+              <ProtectedRoute allowedRoles={["user", "buyer", " seller"]} />
+            }
+          >
             <Route path="/product/:productId" element={<ProductDetails />} />
             <Route path="/checkout/:productId" element={<Checkout />} />
           </Route>
