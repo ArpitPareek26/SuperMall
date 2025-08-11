@@ -57,8 +57,12 @@ const App = () => {
           <Route path="/signup" element={<SignUp />} />
 
           <Route path="/shop/:shopId" element={<ShopDetails />} />
-          <Route path="/product/:productId" element={<ProductDetails />} />
-          <Route path="/checkout/:productId" element={<Checkout />} />
+          {/* <Route path="/product/:productId" element={<ProductDetails />} />
+          <Route path="/checkout/:productId" element={<Checkout />} /> */}
+          <Route element={<ProtectedRoute allowedRoles={["user"]} />}>
+            <Route path="/product/:productId" element={<ProductDetails />} />
+            <Route path="/checkout/:productId" element={<Checkout />} />
+          </Route>
           <Route
             path="/shops/category/:categoryName"
             element={<ShopsByCategory />}
