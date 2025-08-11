@@ -44,6 +44,7 @@ It includes user authentication with JWT, shop management, and product CRUD oper
 
 ## 📂 Project Structure
 
+```
 SuperMall/
 ├── backend/
 │ ├── config/ # DB connection, environment variables
@@ -61,6 +62,7 @@ SuperMall/
 │ └── App.jsx # Main app
 │
 └── README.md # This file
+```
 
 ## ⚙️ Installation & Setup
 
