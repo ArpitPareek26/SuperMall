@@ -4,7 +4,7 @@ import axios from "axios";
 const AuthContext = createContext();
 
 const API = axios.create({
-  baseURL: "http://localhost:4000/api",
+  baseURL: "https://supermall-backend-n450.onrender.com/api",
 });
 
 export const AuthProvider = ({ children }) => {
